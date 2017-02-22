@@ -4,9 +4,10 @@ import (
 	"encoding/json"
 	"log"
 	"net/http"
+	"os"
 )
 
-const token = "<YOUR TOKEN HERE>"
+var token = os.Getenv("TOKEN")
 
 type hackerQuote struct {
 	Quote string `json:"quote"`
